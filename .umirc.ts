@@ -43,6 +43,9 @@ export default defineConfig({
     config.module
       .rule('scss')
       .test(/\.scss$/)
+      .use('style-loader')
+      .loader('style-loader')
+      .end()
       .use('css-loader')
       .loader('css-loader')
       .end()
